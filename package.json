@@ -1,0 +1,23 @@
+{
+  "name": "BioBistro",
+  "version": "1.0.0",
+  "description": "Repository hosting the BioBistro website - best bio restaurant in Glasgow",
+  "main": "index.js",
+  "scripts": {
+    "develop": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefanBabukov/BioBistro.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StefanBabukov/BioBistro/issues"
+  },
+  "homepage": "https://github.com/StefanBabukov/BioBistro#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
