@@ -1,35 +1,46 @@
 .page{
     width: 100%;
     height: 100%;
-    background-color: #706255;
+    background-color: #f4fae1;
 }
 
 .title{
-    /* font-size: 2rem; */
+    font-family: Papyrus, fantasy;
+    font-size: 30px;
     font-weight: bold;
-    color: #aac068;
+    color: #89867b;
     text-align: center;
     margin-top: 1rem;
 }
+p{
+    font-family: Papyrus, fantasy;
+    font-size: 20px;
+}
+
+body {
+    margin: 0px;
+ }
 
 .box{
     width: 30%;
     height: 50%;
-    background-color: white;
+    /* max-height: 50%; */
+    background-color: rgba(255, 255, 255, 0.663);
     border-radius: 5px;
     border-color: black;
     border-style: solid;
+    vertical-align:top;
 
     display: inline-block;
-    text-align: center;
+    /* text-align: center; */
 }
 .centeredElements{
     margin: auto;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
 }
 
-.menuItem{
+.thinBox{
     /* create a black rectangle with information */
     width: 70%;
     height: 25%;
@@ -39,17 +50,12 @@
     background-color: white;
     border-radius: 5px;
     border-color: black;
+
     border-style: solid;
 }
 
-.menuItem-left{
-    float: left;
-}
 
-.menuItem-right{
-    float: right;
-}
-
-.menuItem-left, .menuItem-right{
-    padding: 2rem;
+.menuItem{
+    display: inline-block;
+    padding-left: 3rem;
 }

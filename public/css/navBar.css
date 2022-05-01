@@ -2,20 +2,24 @@
     /* z-index: 3; */
     /* position: fixed; */
     /* top: 0; */
-    min-width: 50px;
+    max-height: 6%;
     width: 100%;
     right: 0; 
     left: 0;
-    padding: 1rem;
-
+    padding: 0.9rem;
+    margin-bottom: -1%;
     background-image: linear-gradient(15deg, #79745C  0%,#787874 100%);
+    
     text-align: center;
   }
   
   .navbar a {
     text-decoration: none;
+    position: static;
     font: 1.2rem sans-serif;
     padding: 1rem;
+    font-family: Papyrus, fantasy;
+
     color: white;
   }
   .navbar a:hover{

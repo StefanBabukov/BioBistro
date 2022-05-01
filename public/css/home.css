@@ -1,15 +1,33 @@
-.menuItem{
-    /* create a black rectangle with information */
+.thinBox{
     width: 70%;
     height: 25%;
-    margin: auto;
-    text-align: center;
-    background-color: white;
+    /* margin: auto; */
+    /* text-align: center; */
+    background-color: rgba(255, 255, 255, 0.742);
     border-radius: 5px;
+    z-index: 1;
     border-color: black;
     border-style: solid;
 }
+/* #home{
+    background-image: url('../outdoorRestaurant.jpg');
+    background-repeat: no-repeat;
+    background-size: 50%;
+}; */
 
+
+.backgroundImage{
+    background-image: url('../outdoorRestaurant.jpg');
+    background-repeat: no-repeat;
+    background-size: 90% 80%;
+    top: 0;
+    left: 0;
+    background-position: center top;
+
+    /* position:absolute; */
+    /* z-index: 10; */
+    /* width: 40%; */
+}
 .menuItem-left{
     float: left;
 }

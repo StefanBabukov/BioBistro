@@ -1,3 +1,8 @@
+const Events = require("../models/Events");
+
+const db = new Events();
+db.init();
+
 const registerView = (req, res) => {
     res.render("register", {});
 }
@@ -7,7 +12,15 @@ const loginView = (req, res) => {
 }
 
 const landingPage = (req, res) => {
-    res.render("home", {title: 'Bio Bistro', dinner: 'Chicken Biryani', lunch:'Pizza'});
+
+    db.getByType('event')
+    .then((entries) => {
+        res.render("home", {events: entries, title: 'Home', breakfast: 'pancakes', lunch: "bio burgers", dinner: '4 course dinner for $10'});
+    })
+    .catch((err) => {
+      console.log("Error: ");
+      console.log(JSON.stringify(err));
+    });
 }
 
 const menuPage = (req, res) => {
