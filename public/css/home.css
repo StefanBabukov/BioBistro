@@ -1,0 +1,23 @@
+.menuItem{
+    /* create a black rectangle with information */
+    width: 70%;
+    height: 25%;
+    margin: auto;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    border-color: black;
+    border-style: solid;
+}
+
+.menuItem-left{
+    float: left;
+}
+
+.menuItem-right{
+    float: right;
+}
+
+.menuItem-left, .menuItem-right{
+    padding: 2rem;
+}

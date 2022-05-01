@@ -1,4 +1,17 @@
-<div>
+import 
+
+const NavBar = ()=>{
+    return(
+        <nav class='navbar'>
+            <a href='/'>Home</a>
+            <a href='/paycalc'>Menu</a>
+            <a href='/aboutus'>About us</a>
+        </nav>
+    )
+}
+export default NavBar;
+
+{/* <div>
 <div className="Navbar">
     <div className="leftSide">
         <div className="links" id={showLinks ? "hidden" : ""}>
@@ -40,4 +53,4 @@
         </Button>
     </div>
 </div>
-</div>
+</div> */}

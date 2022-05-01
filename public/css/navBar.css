@@ -1,0 +1,33 @@
+.navbar {
+    /* z-index: 3; */
+    /* position: fixed; */
+    /* top: 0; */
+    min-width: 50px;
+    width: 100%;
+    right: 0; 
+    left: 0;
+    padding: 1rem;
+
+    background-image: linear-gradient(15deg, #79745C  0%,#787874 100%);
+    text-align: center;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    font: 1.2rem sans-serif;
+    padding: 1rem;
+    color: white;
+  }
+  .navbar a:hover{
+    color: #79745C;
+    background-color: #f7ebb8;
+  }
+  .navbar img {
+    padding-right: 2rem;
+    max-height: 50px;
+  }
+  @media screen and (max-width: 600px) {
+    .navbar a{
+      font-size: 11px;
+    }
+  }
