@@ -15,7 +15,9 @@
     background-size: 50%;
 }; */
 
-
+.body{
+    overflow: hidden;
+}
 .backgroundImage{
     background-image: url('../outdoorRestaurant.jpg');
     background-repeat: no-repeat;

@@ -1,3 +1,33 @@
-.box{
-    width: 40%;
+.thinBox{
+    width: 100%;
 }
+
+.menuNavBar {
+    max-height: 4%;
+    margin: auto;
+    width: 50%;
+    margin-top: 1%;
+    /*right: 0; 
+    left: 0;
+    padding: 0.9rem;
+    margin-bottom: -1%; */
+    background-color: #bdf60f;
+
+    text-align: center;
+  }
+  .menuNavbarItem{
+    display: inline-block;
+    text-decoration: none;
+    position: static;
+    padding-left: 1rem;
+    font: 1.2rem sans-serif;
+    margin-top: 0.5%;
+    /* padding: 1rem; */
+    font-family: Papyrus, fantasy;
+
+    color: white;
+  }
+
+  .menuNavbarItem:hover{
+    color: black;  
+  }

@@ -5,15 +5,28 @@
 <link rel="stylesheet" href="/css/menu.css">
 {{>navBar}}
 
-<div class='page'>
+<div class='page' >
+    <nav class='menuNavBar' style='width=50%;'>
+        <a href='/menu/beverages'class='menuNavbarItem'>Beverages</a>
+        <a href='/menu/grill' class='menuNavbarItem'>Grill</a>
+        <a href='/menu/sides' class='menuNavbarItem'>Sides</a>
+        <a href='/menu/salads' class='menuNavbarItem'>Salads</a>
+        <a href='/menu/vegan' class='menuNavbarItem'>Vegan</a>
+        <a href='/menu/desserts' class='menuNavbarItem'>Desserts</a>
+    <nav>
     <div class='container'>
-    <div class='menuItem'>
+    
+    {{#food}}
 
-    </div>
-        <div class='menuItem'>
+        <div class='thinBox'>
 
-    </div>
-        <div class='menuItem'>
+        <div style='float=left'>
+            <p> {{name}} </p>
+            <p> £{{price}} </p>
+        </div>
+            <p> {{description}} </p>
+        </div>
 
-    </div>
+    {{/food}}
+
 </div>

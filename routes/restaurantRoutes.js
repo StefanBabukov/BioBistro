@@ -1,10 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const controller = require('../controllers/controller.js');
-
+const {login, verify} = require('../middlewares/auth.js');
 router.get("/", controller.landingPage);
 router.get('/menu', controller.menuPage);
 router.get('/aboutUs', controller.aboutUsPage);
+router.get('/login', controller.loginPage)
+router.get('/register', controller.registerPage);
+router.get('/logout', controller.logout);
+router.get('/menu/:category', controller.menuPage);
+
+router.post('/register', controller.registerUser);
+router.post('/login', login, controller.landingPage);
+router.post('/comment', controller.postComment);
 // router.get('/register', controller.registerView);
 
 

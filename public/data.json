@@ -9,6 +9,54 @@
         "title": "Travis Scott cooking & apology party live",
         "description": "He will apologise publicly ",
         "type":"event"
-}
-    
+},
+{
+        "subject": "I liked the exhibition",
+        "contents": "nice",
+        "published": "2020-02-16",
+        "author": "Peter",
+        "type": "comment"
+        },
+        {
+                "subject": "It's great!!!",
+                "contents": "nice",
+                "published": "2020-02-16",
+                "author": "asdasd",
+                "type": "comment"
+        },
+        {
+        "type": "food",
+        "name": "White Wine 2018 Bordeaux",
+        "description": "White wine from France, has light and flowery taste",
+        "category": "beverages",
+        "price": "8.00"
+        },
+        {
+        "type": "food",
+        "name": "Red Wine 2017 Bordeaux",
+        "description": "Red wine from France, strong taste and aroma",
+        "category": "beverages",
+        "price": "10.00"
+        },
+        {
+        "type": "food",
+        "name": "Friend Artichoke Hearts",
+        "description": "Tempura artichoke hearts with marinara and 'ranch' dipping sauces on the side",
+        "category": "vegan",
+        "price": "15.00"
+        },
+        {
+        "type": "food",
+        "name": "Beef steak",
+        "description": "High quality beef steak with a side of rice, ask for medium rare or well-done",
+        "category": "grill",
+        "price": "18.00"
+        },
+        {
+                "type": "food",
+                "name": "Ceasar salad",
+                "description": "Freshly made Ceasar salad with fresh vegetables and croutons",
+                "category": "salads",
+                "price": "10.00"
+        }
 ]

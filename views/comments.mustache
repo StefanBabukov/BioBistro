@@ -1,0 +1,18 @@
+
+<link rel="stylesheet" href="/css/comments.css">
+{{#comments}}
+    <div class='comment'>
+        <div id='profile'>
+            <img src='profilePic.webp' width='70' height='70' >
+            <br/>
+            <p id='author'>{{author}}</p>
+        </div>
+
+        <div id='commentContent'>
+            <p ><b>{{contents}}</b> </p>
+            <p>
+               posted: {{published}}
+            </p>
+        </div>
+    </div>
+{{/comments}}

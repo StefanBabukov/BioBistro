@@ -1,7 +1,17 @@
 <link rel="stylesheet" href="/css/navBar.css">
+{{! <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script> }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 
 <nav class='navbar'>
-    <a class='title' href='/'>Home</a>
-    <a href='/menu'>Menu</a>
-    <a href='/aboutus'>About us</a>
+    <a class='navbarItem' href='/'>Home</a>
+    <a class='navbarItem' href='/menu'>Menu</a>
+    <a class='navbarItem' href='/aboutus'>About us</a>
+    <div class='rightSided'>
+
+        <p class='navbarItem'>{{user}}</p>
+        <a href='/logout'><i class='fas fa-sign-out-alt navbarItem' style='font-size:30px;'></i></a>
+        <a href='/register'><i class="fa fa-user navbarItem" style='font-size: 40px'></i></a>
+        {{! <p class='navbarItem'> asdasdasddasdads</p> }}
+    </div>
 </nav>
