@@ -11,15 +11,13 @@
         "type":"event"
 },
 {
-        "subject": "I liked the exhibition",
-        "contents": "nice",
+        "contents": "Website design sucks lmao",
         "published": "2020-02-16",
-        "author": "Peter",
+        "author": "Mommy",
         "type": "comment"
         },
         {
-                "subject": "It's great!!!",
-                "contents": "nice",
+                "contents": "I fucking love this restaurant",
                 "published": "2020-02-16",
                 "author": "asdasd",
                 "type": "comment"
@@ -40,7 +38,7 @@
         },
         {
         "type": "food",
-        "name": "Friend Artichoke Hearts",
+        "name": "Fried Artichoke Hearts",
         "description": "Tempura artichoke hearts with marinara and 'ranch' dipping sauces on the side",
         "category": "vegan",
         "price": "15.00"
@@ -58,5 +56,20 @@
                 "description": "Freshly made Ceasar salad with fresh vegetables and croutons",
                 "category": "salads",
                 "price": "10.00"
+        },
+        {
+        "type": "food",
+        "name": "Chocolate cake",
+        "description": "Creamy chocolate cake with a chocolate frosting",
+        "category": "desserts",
+        "price": "8.00"
+        },
+        {
+        "type": "food",
+        "name": "Cream pie",
+        "description": "Delicious pie with soft and fluffy cream filling",
+        "category": "desserts",
+        "price": "6.00"
         }
+        
 ]

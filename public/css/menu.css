@@ -1,18 +1,26 @@
 .thinBox{
     width: 100%;
+    background-color: #f4fae1;
 }
-
+.menuContainer{
+    width: 80%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    margin:auto;
+    height: 90%;
+    background-color: #6f6051;
+    border-color: black;
+    border-style: solid;
+    border-radius: 3px;
+    border-width: 2px;
+}
 .menuNavBar {
     max-height: 4%;
     margin: auto;
-    width: 50%;
+    width: 60%;
     margin-top: 1%;
-    /*right: 0; 
-    left: 0;
-    padding: 0.9rem;
-    margin-bottom: -1%; */
-    background-color: #bdf60f;
-
+    background-color: #709176;
     text-align: center;
   }
   .menuNavbarItem{

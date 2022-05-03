@@ -35,7 +35,7 @@ const menuPage = async(req, res) => {
     const wholeMenu = await db.getByType('food');
     const menuFiltered = wholeMenu.filter(food => food.category === category);
     console.log('MENU FILTERED IS ', menuFiltered);
-    res.render("menu", {title: 'Menu', user:username, food: menuFiltered});
+    res.render("menu", {title: 'Menu', user:username, food: menuFiltered, imageUrl:`/${category}.jpeg`});
 }
 
 const registerPage = (req, res) => {

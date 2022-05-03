@@ -6,7 +6,7 @@
 {{>navBar}}
 
 <div class='page' >
-    <nav class='menuNavBar' style='width=50%;'>
+    <nav class='menuNavBar'>
         <a href='/menu/beverages'class='menuNavbarItem'>Beverages</a>
         <a href='/menu/grill' class='menuNavbarItem'>Grill</a>
         <a href='/menu/sides' class='menuNavbarItem'>Sides</a>
@@ -14,19 +14,24 @@
         <a href='/menu/vegan' class='menuNavbarItem'>Vegan</a>
         <a href='/menu/desserts' class='menuNavbarItem'>Desserts</a>
     <nav>
-    <div class='container'>
+    <div class='menuContainer'>
     
-    {{#food}}
+        {{#food}}
+    
+            <div class='thinBox' style='display:inline-block'>
 
-        <div class='thinBox'>
+            <div style='float:left;'>
+                <p style='display:inline-block;'> {{name}}</p> 
+                <p style='display:inline-block; color:blue;'> £{{price}} </p>
+                 <img style='display:grid; margin-left: 1%;'src={{imageUrl}} width='120' height='120' >
 
-        <div style='float=left'>
-            <p> {{name}} </p>
-            <p> £{{price}} </p>
-        </div>
-            <p> {{description}} </p>
-        </div>
+            </div>
+            <div style='margin-top:10%;'  >
+                <p > {{description}}</p>
+            </div>
+            </div>
 
-    {{/food}}
+        {{/food}}
+    </div>
 
 </div>
