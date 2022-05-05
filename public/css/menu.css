@@ -1,24 +1,57 @@
 .thinBox{
+  display:inline-block; 
     width: 100%;
+    height: 20%;
+    margin-bottom: 5%;
     background-color: #f4fae1;
 }
+.page{
+  background-image: url('../menuBackground.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.titleBox{
+    width: 70%;
+    padding-left: 1rem;
+  border-radius: 13px;
+    background-size: 100%;
+    background-color: #cde77f;
+}
+.title{
+  color:black;
+}
+#adminAddMenu{
+  float:right;
+  color:red; 
+  margin-top: 1%;
+  font-size: 15px;
+}
+/* #adminAddMenu{
+  position: relative;
+  display: inline-block;
+  left: 50%
+  /* float: right; */
+/* }  */
 .menuContainer{
     width: 80%;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 1rem;
+    overflow-y: auto;
     margin:auto;
     height: 90%;
-    background-color: #6f6051;
+    background-color: #c19a6b93;
     border-color: black;
     border-style: solid;
     border-radius: 3px;
-    border-width: 2px;
+    border-width: 1px;
 }
 .menuNavBar {
     max-height: 4%;
     margin: auto;
     width: 60%;
+    padding-right: 1rem;
+    padding-left: 1rem;
     margin-top: 1%;
     background-color: #709176;
     text-align: center;
@@ -35,7 +68,50 @@
 
     color: white;
   }
+  .menuContainer p {
+    text-align: left;
+    margin-left: 4%;
+  }
+  .itemLeft{
+    float: left;
+  }
+  .itemRight{
+    /* display: inline-block; */
+    margin-left: 30%;
+  }
 
+  @media screen and (max-width: 450px) {
+    .title{
+      font-size: 12px;
+    }
+    .menuNavbarItem, #adminAddMenu{
+      font-size: 10px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+  .menuNavBar{
+    width: 90%;
+  }
+  .menuContainer img{
+    width: 80;
+    height: 80;
+
+  }
+  }
+  .menuContainer img{
+      margin-top: 25%;
+      margin-left: 10%;
+      /* margin: 0; */
+      
+      /* position: absolute;
+display: grid;      
+left: 28%; */
+
+      /* -ms-transform: translateY(-50%);
+      transform: translateY(-50%); */
+  }
   .menuNavbarItem:hover{
     color: black;  
   }
+

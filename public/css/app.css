@@ -1,6 +1,6 @@
 .page{
     background-color: #f4fae1;
-    height:95%;
+    height:100%;
 }
 
 
@@ -29,16 +29,20 @@ body {
  button{
     background-color: #709176;
     color: black;
-    border-radius: 5px;
+    border-radius: 8px;
 }
  .textInput{
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
-    width: 90%;
+    width: 80%;
     height: 5%;
  }
 
+ .descriptionInput{
+    height: 30%;
+    width: 80%;
+}
 .box{
     width: 40%;
     height: 50%;

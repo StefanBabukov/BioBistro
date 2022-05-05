@@ -8,11 +8,13 @@ router.get('/aboutUs', controller.aboutUsPage);
 router.get('/login', controller.loginPage)
 router.get('/register', controller.registerPage);
 router.get('/logout', controller.logout);
+router.get('/menu/edit', controller.addItemPage);
 router.get('/menu/:category', controller.menuPage);
 
 router.post('/register', controller.registerUser);
 router.post('/login', login, controller.landingPage);
 router.post('/comment', controller.postComment);
+router.post('/menu/edit', controller.addMenuItem);
 // router.get('/register', controller.registerView);
 
 

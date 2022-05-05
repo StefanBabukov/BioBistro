@@ -35,9 +35,28 @@ constructor(dbFilePath) {
             } else {
                 resolve(entries);
                 //to see what the returned data looks like
-                console.log('all the events: ', entries);
             }
             })
+        })
+    }
+    addMenuItem(title, description, price, category){
+
+        const entry ={
+            type: 'food',
+            name: title,
+            disabled: false,
+            description,
+            category,
+            price
+        }
+        return new Promise((resolve, reject) => {
+            this.db.insert(entry, function (err) {
+                if (err) {
+                    console.log("Can't insert menu item: ", title);
+                    reject(err)
+                }
+                resolve(entry);
+            });
         })
     }
 

@@ -4,7 +4,6 @@ const jwt = require("jsonwebtoken");
 
 exports.login = function (req, res,next) {
     const {username, password} = req.body;
-    console.log('HERE WITH USERAND PASS')
     db.getAll();
     db.lookupUser(username, function (err, user) {
         if (err) {
@@ -22,7 +21,6 @@ exports.login = function (req, res,next) {
             let payload = { username: username };
             //create the access token 
             let accessToken = jwt.sign(payload, 'zxczxczxc',{}); 
-            console.log('accessToken: ', accessToken);
             res.cookie("jwt", accessToken);
             req.cookies.jwt = accessToken;
             next();

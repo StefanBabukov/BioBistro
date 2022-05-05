@@ -12,16 +12,36 @@ const registerView = (req, res) => {
 
 const getUser = (req, res) => {
     let accessToken = req.cookies.jwt;
-    console.log('ACCESS TOKEN IS ', accessToken);
+    let result = {username:''}
+
     if(!accessToken){
-        return;
+        return result;
     }
     result = jwt.decode(accessToken);
-    return result.username
+    if(result.username === 'admin'){
+        result.isAdmin = true;
+    }
+    return result
+}
+
+const addMenuItem = async(req, res) => {
+    const {dishTitle, dishDescription, dish, price } = req.body;
+    db.addMenuItem(dishTitle, dishDescription,price, dish).then(res.redirect('/menu'));
+    console.log('NEW DISH', dish, 'DISH TITLE', dishTitle, 'DISH DESCRIPTION', dishDescription, 'price ', price);
+
+}
+
+const addItemPage = async(req, res) => {
+    const {username} = getUser(req, res);
+    if(username!=='admin'){
+        res.send(403,'Not admin.')
+    }
+    res.render("addMenuItem", {title: 'Add Item'});
 }
 
 const landingPage = async(req, res) => {
-    const username = getUser(req, res);
+
+    const {username} = getUser(req, res);
     const comments = await db.getByType('comment')
     const events = await db.getByType('event')
 
@@ -31,11 +51,16 @@ const landingPage = async(req, res) => {
 const menuPage = async(req, res) => {
     const category = req.params.category || 'beverages';
     
-    const username = getUser(req, res);
+    const {username, isAdmin} = getUser(req, res);
     const wholeMenu = await db.getByType('food');
-    const menuFiltered = wholeMenu.filter(food => food.category === category);
-    console.log('MENU FILTERED IS ', menuFiltered);
-    res.render("menu", {title: 'Menu', user:username, food: menuFiltered, imageUrl:`/${category}.jpeg`});
+    let menuFiltered = wholeMenu.filter(food => food.category === category);
+
+    if(!isAdmin){
+        // if its not admin, the disabled menu items by the chef are not shown
+        menuFiltered = menuFiltered.filter(food => food.disabled === false);
+    }
+
+    res.render("menu", {title: 'Menu', user:username, food: menuFiltered, imageUrl:`/${category}.jpeg`, isAdmin});
 }
 
 const registerPage = (req, res) => {
@@ -57,8 +82,6 @@ const registerUser = (req, res) => {
           return;
         }
         db.createUser(username, password).then(res.redirect('/login'));
-        console.log("register user", username, "password", password);
-        // res.redirect("/login");
     });
 
 }
@@ -71,9 +94,7 @@ const login = (req, res) => {
         return;
     }
 
-    db.login(username, password).then((response)=>{
-        console.log('RESPONSE IS ', response);
-    })
+    db.login(username, password)
 }
 
 const loginPage = (req, res) => {
@@ -89,7 +110,6 @@ const logout = (req, res) => {
 }
 
 const postComment = async(req, res) => {
-    console.log('HERE LOLL')
     const {comment} = req.body;
     const token = req.cookies.jwt;
     const {username} = jwt.decode(token);
@@ -112,6 +132,8 @@ module.exports =  {
     aboutUsPage,
     registerView,
     registerUser,
+    addItemPage,
+    addMenuItem,
     registerPage,
     postComment,
 };

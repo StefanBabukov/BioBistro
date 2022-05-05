@@ -13,22 +13,38 @@
         <a href='/menu/salads' class='menuNavbarItem'>Salads</a>
         <a href='/menu/vegan' class='menuNavbarItem'>Vegan</a>
         <a href='/menu/desserts' class='menuNavbarItem'>Desserts</a>
+        {{#isAdmin}}
+            {{! <div id='adminAddMenu'> }}
+                <a class='menuNavbarItem' id='adminAddMenu' href='/menu/edit'>Edit Menu</a>
+            {{! </div> }}
+        {{/isAdmin}}
     <nav>
     <div class='menuContainer'>
     
         {{#food}}
-    
-            <div class='thinBox' style='display:inline-block'>
+            <div class='titleBox'>
 
-            <div style='float:left;'>
-                <p style='display:inline-block;'> {{name}}</p> 
-                <p style='display:inline-block; color:blue;'> £{{price}} </p>
-                 <img style='display:grid; margin-left: 1%;'src={{imageUrl}} width='120' height='120' >
+                <div class='itemLeft'>
+                    <h1 class='title'>{{name}}</h1>
+                </div>
+                <div class='itemRight'>
+                    <h3 style='color:blue; display: inline-block'>£{{price}}</h3>
+                    {{#isAdmin}}
+                        <input type="checkbox"  name="disabled" {{#disabled}}checked{{/disabled}}>
+                        <label for="disabled">Item disabled</label>
+                    {{/isAdmin}}
 
+                </div>
             </div>
-            <div style='margin-top:10%;'  >
-                <p > {{description}}</p>
-            </div>
+
+            <div class='thinBox' >
+
+                <div class='itemLeft'>
+                    <img style='display:grid;'src={{imageUrl}} width='120' height='120' >
+                </div>
+                <div class='itemRight'>
+                    <p> {{description}}</p>
+                </div>
             </div>
 
         {{/food}}

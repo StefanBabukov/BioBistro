@@ -1,0 +1,76 @@
+<html>
+<head>
+    {{>header}}
+</head>
+<body>
+    <div class="page">
+    <div class=centeredElements>
+    <h2 class='title'>Add new menu dish</h2>
+
+        <div class='box' >
+            <form method="POST" action="/menu/edit">
+                <div class="form-group">
+                    <label class='title' for="dishTitle">
+                        Title
+                    </label>
+                    <div >
+                        <input type="text" class='textInput'  name="dishTitle" placeholder="Type dish title" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class='title' for="price">
+                        Price
+                    </label>
+                    <input type="number"step="0.01"  name="price" required>
+                </div>
+                <div class="form-group">
+                    <label class='title' for="dishDescription" >
+                        Description
+                    </label>
+                    <div class="col-sm-10">
+                        <input type="text" class='descriptionInput'  name="dishDescription" placeholder="Type dish description" required>
+                    </div>
+                </div>
+                <div style='display: inline-block'>
+                    <div>
+                        <input id='sides' type="radio" name="dish" value="sides" checked >
+                        <label for="sides">Sides</label>
+                    </div>
+
+                    <div>
+                        <input id='grill' type="radio" name="dish" value="grill">
+                        <label for="grill">Grill</label>
+                    </div>
+
+                    <div>
+                        <input id='vegan' type="radio" name="dish" value="vegan">
+                        <label for="vegan">Vegan</label>
+                    </div>
+                <form>
+                </div>
+                <div style='display: inline-block; margin-top: 2%'>
+                              
+                    <div>
+                        <input id='beverages' type="radio" name="dish" value="beverages" checked>
+                        <label for="beverages">Beverages</label>
+                    </div>
+
+                    <div>
+                        <input id='salads' type="radio" name="dish" value="salads">
+                        <label for="radio">Salads</label>
+                    </div>
+
+                    <div>
+                        <input id='desserts' type="radio" name="dish" value="desserts">
+                        <label for="desserts">Desserts</label>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" value="Sign In" style='margin-top: 5%; position:relative'> Add </button>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

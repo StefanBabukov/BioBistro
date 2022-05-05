@@ -10,8 +10,12 @@
     <div class='rightSided'>
 
         <p class='navbarItem'>{{user}}</p>
-        <a href='/logout'><i class='fas fa-sign-out-alt navbarItem' style='font-size:30px;'></i></a>
-        <a href='/register'><i class="fa fa-user navbarItem" style='font-size: 40px'></i></a>
+        {{#user}}
+            <a href='/logout'><i class='fas fa-sign-out-alt navbarItem' style='font-size:30px;'></i></a>
+        {{/user}}
+        {{^user}}
+            <a href='/register'><i class="fa fa-user navbarItem" style='font-size: 40px'></i></a>
+        {{/user}}
         {{! <p class='navbarItem'> asdasdasddasdads</p> }}
     </div>
 </nav>

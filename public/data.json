@@ -27,20 +27,23 @@
         "name": "White Wine 2018 Bordeaux",
         "description": "White wine from France, has light and flowery taste",
         "category": "beverages",
-        "price": "8.00"
+        "price": "8.00",
+        "disabled": false
         },
         {
         "type": "food",
         "name": "Red Wine 2017 Bordeaux",
         "description": "Red wine from France, strong taste and aroma",
         "category": "beverages",
-        "price": "10.00"
+        "price": "10.00",
+        "disabled": false
         },
         {
         "type": "food",
         "name": "Fried Artichoke Hearts",
         "description": "Tempura artichoke hearts with marinara and 'ranch' dipping sauces on the side",
         "category": "vegan",
+        "disabled": false,
         "price": "15.00"
         },
         {
@@ -48,6 +51,7 @@
         "name": "Beef steak",
         "description": "High quality beef steak with a side of rice, ask for medium rare or well-done",
         "category": "grill",
+        "disabled": true,
         "price": "18.00"
         },
         {
@@ -55,6 +59,7 @@
                 "name": "Ceasar salad",
                 "description": "Freshly made Ceasar salad with fresh vegetables and croutons",
                 "category": "salads",
+                "disabled": false,
                 "price": "10.00"
         },
         {
@@ -62,6 +67,7 @@
         "name": "Chocolate cake",
         "description": "Creamy chocolate cake with a chocolate frosting",
         "category": "desserts",
+        "disabled": false,
         "price": "8.00"
         },
         {
@@ -69,7 +75,13 @@
         "name": "Cream pie",
         "description": "Delicious pie with soft and fluffy cream filling",
         "category": "desserts",
+        "disabled": false,
         "price": "6.00"
+        },
+        {
+        "username": "admin",
+        "password": "$2b$10$VTu9OVlMn090s3IOzYD3QOByEALGMShltFURjQM40k4GjBw0oPGey",
+        "type": "user"
         }
         
 ]
