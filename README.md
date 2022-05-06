@@ -17,4 +17,10 @@ To log in as admin use credentials:
 username: admin
 password: adminadmin
 
+Note:
+About us page endpoint does not work when deployed in heroku, 
+if you want to see it please run it locally with the steps provided and navigate to localhost:3000/aboutus.
+
+Live version of the site - https://bio-bistro.herokuapp.com/
+
 
