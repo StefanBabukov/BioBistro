@@ -3,7 +3,9 @@ Repository hosting the BioBistro website - best bio restaurant in Glasgow
 
 To run the website:
 install packages with - npm install
+
 run with - node index.js
+
 after that the page should be available at localhost:3000
 
 Features:
