@@ -30,7 +30,7 @@
                 <div class='itemRight'>
                     <h3 style='color:blue; display: inline-block'>£{{price}}</h3>
                     {{#isAdmin}}
-                        <input type="checkbox"  name="disabled" {{#disabled}}checked{{/disabled}}>
+                        <input type="checkbox" onclick='setDisabled(this, "{{_id}}")'  name="disabled" {{#disabled}}checked{{/disabled}}>
                         <label for="disabled">Item disabled</label>
                     {{/isAdmin}}
 
@@ -49,5 +49,12 @@
 
         {{/food}}
     </div>
-
+    <script>
+        async function setDisabled(value, itemId){
+            await fetch(`/menu/disabled/${value.checked}/${itemId}`,{
+                method: "POST"
+                }
+            )
+        }
+    </script>
 </div>

@@ -24,11 +24,14 @@ const getUser = (req, res) => {
     return result
 }
 
-const addMenuItem = async(req, res) => {
+const addMenuItem = (req, res) => {
     const {dishTitle, dishDescription, dish, price } = req.body;
     db.addMenuItem(dishTitle, dishDescription,price, dish).then(res.redirect('/menu'));
-    console.log('NEW DISH', dish, 'DISH TITLE', dishTitle, 'DISH DESCRIPTION', dishDescription, 'price ', price);
+}
 
+const setMenuItemAvailability = async(req, res)=>{
+    const {disabled, itemId} = req.params;
+    await db.setMenuItemAvailability(disabled, itemId)
 }
 
 const addItemPage = async(req, res) => {
@@ -136,6 +139,7 @@ module.exports =  {
     registerUser,
     addItemPage,
     addMenuItem,
+    setMenuItemAvailability,
     registerPage,
     postComment,
 };

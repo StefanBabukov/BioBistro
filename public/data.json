@@ -11,15 +11,21 @@
         "type":"event"
 },
 {
-        "contents": "Website design sucks lmao",
-        "published": "2020-02-16",
-        "author": "Mommy",
+        "contents": "I loved the atmosphere and the staff is really nice to you!",
+        "published": "2021-05-19",
+        "author": "Marie Curie",
         "type": "comment"
         },
         {
-                "contents": "I fucking love this restaurant",
-                "published": "2020-02-16",
-                "author": "asdasd",
+                "contents": "Not bad, would visit again :)",
+                "published": "2022-03-11",
+                "author": "Bob",
+                "type": "comment"
+        },
+        {
+                "contents": "Food was a bit pricey",
+                "published": "2021-06-11",
+                "author": "hater123",
                 "type": "comment"
         },
         {
