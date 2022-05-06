@@ -45,6 +45,22 @@
         "disabled": false
         },
         {
+                "type": "food",
+                "name": "coca cola",
+                "description": "some description like, this is a beverage its really good and you should buy, buy, buy and buy",
+                "category": "beverages",
+                "price": "3.00",
+                "disabled": false
+                },
+                {
+                        "type": "food",
+                        "name": "tap water",
+                        "description": "some description like, this is a beverage its really good and you should buy, buy, buy and buy",
+                        "category": "beverages",
+                        "price": "14.00",
+                        "disabled": false
+                        },
+        {
         "type": "food",
         "name": "Fried Artichoke Hearts",
         "description": "Tempura artichoke hearts with marinara and 'ranch' dipping sauces on the side",
