@@ -2,16 +2,91 @@
 {{>header}}
 </head>
 <body>
-<link rel="stylesheet" href="/css/home.css">
-{{>navBar}}
+<link rel="stylesheet" href="/css/aboutus.css">
+
+ {{>navBar}}
 
 <div class='page'>
+    <h1 class='title'>Bio bistro about us </h1>
     <div class='centeredElements'>
-     <div class='box'>
-     </div>
         <div class='box'>
-   
+            <p style='text-align:left'>Here at Bio Bistro we strive for bringing quality bio food which has been produced locally and brings authentic taste. 
+            We have a variety of items and we hope to bring you the best service we can. <br/>Our chefs are professionally trained with years of experience.
+            More about our products: <br/>
+            Vegetables farmed in the outskirts of Glasgow and are brought to your table fresh and delightful
+            Food is produced sustainably without the use of pecticides. Our meat does not leave a carbon footprint on the climate.</p>
         </div>
+        <div class='box'>
+            <div class="mapouter">
+                <div class="gmap_canvas">
+                    <iframe width="100%" height="100%" 
+                    id="gmap_canvas" 
+                    src="https://maps.google.com/maps?q=Glasgow%20caledonian%20university&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+                    frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <div class='thinBox'>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                <div class="numbertext">1 / 3</div>
+                <img src="img_nature_wide.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">2 / 3</div>
+                <img src="img_snow_wide.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                <div class="numbertext">3 / 3</div>
+                <img src="img_mountains_wide.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+
+                </div>
+                <br>
+
+                <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+
+                <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                let i;
+                let slides = document.getElementsByClassName("mySlides");
+                let dots = document.getElementsByClassName("dot");
+                if (n > slides.length) {slideIndex = 1}    
+                if (n < 1) {slideIndex = slides.length}
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active";
+                }
+                </script>
         </div>
     </div>
 </div>

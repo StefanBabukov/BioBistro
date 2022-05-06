@@ -101,7 +101,9 @@ const loginPage = (req, res) => {
     res.render("login", {title: 'Login'});
 }
 const aboutUsPage = (req, res) => {
-    res.render("aboutUs", {title: 'About Us'});
+    const {username} = getUser(req, res);
+
+    res.render("aboutUs", {title: 'About Us', user:username});
 }
 
 const logout = (req, res) => {

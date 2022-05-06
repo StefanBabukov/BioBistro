@@ -92,7 +92,7 @@ body {
       /* display: block; */
       width: 100%;
     }
-    .title{
+    .title, h3{
         font-size: 15px;
     }
     p{
