@@ -3,9 +3,7 @@
     height: 25%;
     margin: auto;
     margin-top: 10px;
-    /* text-align: center; */
     padding: 1rem;
-    /* background-color: #70917682; */
     border-radius: 10px;
     border-color: black;
     border-style: solid;
@@ -27,8 +25,4 @@
     color: black;
     font-size: 1.2rem;
     font-family: Arial, Helvetica, sans-serif;
-}
-.comment .title{
-    /* float:left;
-    margin-left: 2%; */
 }

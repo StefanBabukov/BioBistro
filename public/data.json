@@ -1,4 +1,9 @@
-[
+[{
+        "breakfast": "Bacon and eggs",
+        "lunch": "Pork and beans",
+        "dinner": "Steak and potatoes",
+        "type":"dailyMenu"
+},
     {
             "date": "2020-02-16",
             "title": "Gordon ramsay cooking",
@@ -76,6 +81,14 @@
         "disabled": true,
         "price": "18.00"
         },
+        {
+                "type": "food",
+                "name": "sausage feast",
+                "description": "German sausages in a German style bun with a side of rice, ask for medium rare or well-done",
+                "category": "grill",
+                "disabled": false,
+                "price": "18.00"
+                },
         {
                 "type": "food",
                 "name": "Ceasar salad",

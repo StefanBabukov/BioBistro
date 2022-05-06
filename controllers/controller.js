@@ -47,8 +47,9 @@ const landingPage = async(req, res) => {
     const {username} = getUser(req, res);
     const comments = await db.getByType('comment')
     const events = await db.getByType('event')
+    const dailyMenu = await db.getByType('dailyMenu')
 
-    res.render("home", {events, comments, user: username, title: 'Home', breakfast: 'pancakes', lunch: "bio burgers", dinner: '4 course dinner for $10'});
+    res.render("home", {events, comments, user: username, title: 'Home', dailyMenu});
 }
 
 const menuPage = async(req, res) => {

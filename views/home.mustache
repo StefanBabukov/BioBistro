@@ -9,20 +9,22 @@
 <div class='page' id='home'>
     <div class='backgroundImage'>
     <h1 class='title'>Bio Bistro restaurant</h1>
-    <div class='thinBox'>
+    <div class='thinBox' style='width: 60%'>
             <h2 class='title'>Today's menu</h2>
-            <div class='menuItem'>
-                <h3 class='title'>Breakfast</h3>
-                <p style='margin-down=100px'>{{breakfast}}</p>
-            </div>
-            <div class='menuItem'>
-                <h3 class='title'>Lunch</h3>
-                <p>{{lunch}}</p>
-            </div>
-            <div class='menuItem'>
-                <h3 class='title'>Dinner</h3>
-                <p>{{dinner}}</p>
-            </div>
+            {{#dailyMenu}}
+                <div class='menuItem'>
+                    <h3 class='title'>Breakfast</h3>
+                    <p style='margin-down=100px'>{{breakfast}}</p>
+                </div>
+                <div class='menuItem'>
+                    <h3 class='title'>Lunch</h3>
+                    <p>{{lunch}}</p>
+                </div>
+                <div class='menuItem'>
+                    <h3 class='title'>Dinner</h3>
+                    <p>{{dinner}}</p>
+                </div>
+            {{/dailyMenu}}
     </div>
     <div class='centeredElements'>
 
