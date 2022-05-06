@@ -102,32 +102,6 @@ constructor(dbFilePath) {
         });
     }    
 
-    login(username, password){
-        this.lookupUser(username, function (err, user) {
-            if (err) {
-              console.log("error looking up user", err);
-              return 401;
-            }
-            if (!user) {
-              console.log("user ", username, " not found");
-              return 403;
-            }
-            //compare provided password with stored password
-            bcrypt.compare(password, user.password, function (err, result) {
-              if (result) {
-                  
-                let payload = { username };
-                //create the access token 
-                let accessToken = jwt.sign(payload, process.env.ACCESS_TOKEN_SECRET,{expiresIn: 300}); 
-                res.cookie("jwt", accessToken);
-                next();
-              } else {
-                return res.render("user/login"); 
-              }
-            });
-        });
-    }
-
     createUser(username, password) {
         return new Promise((resolve, reject) => {
         const {db} = this;
